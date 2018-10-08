@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.d2dbd95c.css",
-  "main.css.map": "static/css/main.d2dbd95c.css.map",
-  "main.js": "static/js/main.8093eb3d.js",
-  "main.js.map": "static/js/main.8093eb3d.js.map",
+  "main.css": "static/css/main.8f2832b3.css",
+  "main.css.map": "static/css/main.8f2832b3.css.map",
+  "main.js": "static/js/main.ef73f654.js",
+  "main.js.map": "static/js/main.ef73f654.js.map",
   "static/media/F.inmotionnowlogo.png": "static/media/F.inmotionnowlogo.3bdc7ce9.png",
   "static/media/Icon_Black.png": "static/media/Icon_Black.24a3eb39.png",
   "static/media/Merchandising@2x.png": "static/media/Merchandising@2x.efcc7acc.png",
@@ -12,10 +12,5 @@
   "static/media/impekable_logo.svg": "static/media/impekable_logo.28d76ca1.svg",
   "static/media/logo-web.svg": "static/media/logo-web.efb90aff.svg",
   "static/media/mark.png": "static/media/mark.1410b418.png",
-  "static/media/slope-logo_full-color_dark.png": "static/media/slope-logo_full-color_dark.60ffdc2e.png",
-  "static/media/undraw_blank_canvas_3rbb.svg": "static/media/undraw_blank_canvas_3rbb.c24ab9f7.svg",
-  "static/media/undraw_building_blocks_n0nc.svg": "static/media/undraw_building_blocks_n0nc.3625acb9.svg",
-  "static/media/undraw_co-working_825n.svg": "static/media/undraw_co-working_825n.b7306309.svg",
-  "static/media/undraw_community_8nwl.svg": "static/media/undraw_community_8nwl.259e5931.svg",
-  "static/media/undraw_work_chat_erdt.svg": "static/media/undraw_work_chat_erdt.966591c1.svg"
+  "static/media/slope-logo_full-color_dark.png": "static/media/slope-logo_full-color_dark.60ffdc2e.png"
 }

@@ -1,1 +1,78 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="/favicon.ico"><title>React App</title><link href="/static/css/main.d2dbd95c.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script type="text/javascript" src="/static/js/main.8093eb3d.js"></script></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="/favicon.png"><link rel="stylesheet" href="https://wwwimages2.adobe.com/etc/beagle/public/globalnav/adobe-privacy/latest/privacy.min.css"><script defer="defer" src="https://wwwimages2.adobe.com/etc/beagle/public/globalnav/adobe-privacy/latest/privacy.min.js"></script><script defer="defer">function createTrackerID() {
+      var fmt = 'xxxxxxxx-xxxx-4xxx-1xxx-xxxxxxxxxxxx';
+      return fmt.split("").map(function (c) {
+        if (c === 'x') {
+          return Math.floor(Math.random() * 16).toString(16);
+        } else {
+          return c;
+        }
+      }).join("");
+    }
+
+    var INGEST_ENDPOINT = "https://cc-api-data.adobe.io/ingest";
+    var TRACKER_KEY = "xdplatform";
+    var ENVIRONMENT = "prod";
+    var tracker;
+    var evidonTimer = setTimeout(track, 500);
+
+    /* report page hit IF we have privacy consent from the user */
+    window.addEventListener("adobePrivacy:PrivacyConsent", function () {
+
+      // check if the user has a cookie
+      var cookies = document.cookie.split(';');
+      var trackerCookie = cookies.filter(function (v) {
+        return v.trim().substr(0, TRACKER_KEY.length + 1) === TRACKER_KEY + '=';
+      });
+      if (trackerCookie.length > 0) {
+        tracker = trackerCookie[0].split("=")[1];
+      } else {
+        tracker = createTrackerID();
+        document.cookie = TRACKER_KEY + "=" + tracker;
+      }
+
+      clearInterval(evidonTimer);
+      track();
+
+      if (typeof gitbook !== "undefined") {
+        gitbook.events.on("page.change", () => track());
+      }
+    });
+
+    function track() {
+
+      // track the page hit
+      var req = new XMLHttpRequest();
+      req.open("POST", INGEST_ENDPOINT);
+
+      req.setRequestHeader("Content-Type", "application/json");
+      req.setRequestHeader("X-API-Key", "xdplatform-web-service");
+
+      // (Note: we don't care about errors here)
+
+      var data = {
+        "events": [{
+          "project": "xdplatform-web-service",
+          "environment": ENVIRONMENT,
+          "time": new Date().toISOString(),
+          "ingesttype": "dunamis",
+          "data": {
+            "event.workflow": "XD",
+            "event.category": "WEB",
+            "event.subcategory": "VIEW",
+            "event.type": "render",
+            "event.type": "page",
+            "event.pagename": location.hostname + location.pathname,
+            "event.user_guid": tracker || createTrackerID(), // fall back to random ID (in case of no evidon)
+            "event.user_agent": navigator.userAgent,
+            "event.language": navigator.language,
+            "event.url": location.href,
+            "event.referrer": document.referrer,
+            "source.name": "XD Platform",
+            "source.platform": "Web"
+          }
+        }]
+      };
+
+      req.send(JSON.stringify(data));
+
+    }</script><title>Adobe XD Platform - Home</title><link href="/static/css/main.8f2832b3.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script type="text/javascript" src="/static/js/main.ef73f654.js"></script></body></html>
