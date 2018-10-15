@@ -1,16 +1,21 @@
 {
-  "main.css": "static/css/main.8f2832b3.css",
-  "main.css.map": "static/css/main.8f2832b3.css.map",
-  "main.js": "static/js/main.ef73f654.js",
-  "main.js.map": "static/js/main.ef73f654.js.map",
+  "main.css": "static/css/main.775add1c.css",
+  "main.css.map": "static/css/main.775add1c.css.map",
+  "main.js": "static/js/main.db1ae827.js",
+  "main.js.map": "static/js/main.db1ae827.js.map",
   "static/media/F.inmotionnowlogo.png": "static/media/F.inmotionnowlogo.3bdc7ce9.png",
   "static/media/Icon_Black.png": "static/media/Icon_Black.24a3eb39.png",
-  "static/media/Merchandising@2x.png": "static/media/Merchandising@2x.efcc7acc.png",
+  "static/media/S_Illu_ArrowRight_180x30.svg": "static/media/S_Illu_ArrowRight_180x30.e4021511.svg",
+  "static/media/S_Illu_DeveloperCommunity_180x120.svg": "static/media/S_Illu_DeveloperCommunity_180x120.0d86feae.svg",
+  "static/media/S_Illu_UserCommunity_180x120.svg": "static/media/S_Illu_UserCommunity_180x120.5cde74f8.svg",
   "static/media/Stark Logo Avatar (1).png": "static/media/Stark Logo Avatar (1).1102df18.png",
   "static/media/UT_Logo.png": "static/media/UT_Logo.fcd797bb.png",
   "static/media/behance.png": "static/media/behance.089af933.png",
   "static/media/impekable_logo.svg": "static/media/impekable_logo.28d76ca1.svg",
   "static/media/logo-web.svg": "static/media/logo-web.efb90aff.svg",
   "static/media/mark.png": "static/media/mark.1410b418.png",
-  "static/media/slope-logo_full-color_dark.png": "static/media/slope-logo_full-color_dark.60ffdc2e.png"
+  "static/media/slope-logo_full-color_dark.png": "static/media/slope-logo_full-color_dark.60ffdc2e.png",
+  "static/media/xd_web_build.png": "static/media/xd_web_build.7c317074.png",
+  "static/media/xd_web_create.png": "static/media/xd_web_create.2687667c.png",
+  "static/media/xd_web_share.png": "static/media/xd_web_share.dd420876.png"
 }
